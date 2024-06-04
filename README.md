@@ -1,3 +1,5 @@
+**There is no declaration file in the Greeting Class**
+
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
