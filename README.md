@@ -1,4 +1,4 @@
-**There is no declaration file in the Greeting Class**
+**There is no Declaration Package in the Greeting Class**
 
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
