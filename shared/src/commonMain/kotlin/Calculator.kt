@@ -11,7 +11,8 @@
          return left*right
      }
      fun Divide(left: Int, right: Int): Int{
-
+        if(right==0)
+            ArithmeticException("division by zero not allowed")
          return left/right
      }
 

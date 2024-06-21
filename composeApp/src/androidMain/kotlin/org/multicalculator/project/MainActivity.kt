@@ -1,6 +1,7 @@
 package org.multicalculator.project
 
 import App
+import Calculator
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -53,10 +54,10 @@ fun CalcView(){
     if(complete && operation!=""){
         var answer by remember { mutableStateOf(0) }
         when(operation){
-            "+" -> answer =leftNumber +rightNumber
-            "-" ->answer= leftNumber - rightNumber
-            "*" ->answer=leftNumber * rightNumber
-            "/" -> answer=leftNumber / rightNumber
+            "+" -> answer =Calculator().Add(leftNumber,rightNumber).toInt()
+            "-" ->answer= Calculator().Subtract(leftNumber,rightNumber).toInt()
+            "*" ->answer=Calculator().Muliply(leftNumber,rightNumber).toInt()
+            "/" -> answer=Calculator().Divide(leftNumber,rightNumber).toInt()
         }
         displayText.value =answer.toString()
 
