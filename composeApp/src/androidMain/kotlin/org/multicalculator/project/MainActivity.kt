@@ -50,6 +50,24 @@ fun CalcView(){
     var operation by rememberSaveable { mutableStateOf("") }
     var complete by rememberSaveable { mutableStateOf(false) }
 
+    if(complete && operation!=""){
+        var answer by remember { mutableStateOf(0) }
+        when(operation){
+            "+" -> answer =leftNumber +rightNumber
+            "-" ->answer= leftNumber - rightNumber
+            "*" ->answer=leftNumber * rightNumber
+            "/" -> answer=leftNumber / rightNumber
+        }
+        displayText.value =answer.toString()
+
+    }
+    else if(!complete && operation!=""){
+        displayText.value = rightNumber.toString()
+    }
+    else {
+        displayText.value = leftNumber.toString()
+    }
+
 
     Column(
         modifier = Modifier
