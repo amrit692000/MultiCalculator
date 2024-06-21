@@ -68,7 +68,15 @@ fun CalcView(){
         displayText.value = leftNumber.toString()
     }
 
+    fun numberPress(btnNum: Int) {
 
+    }
+    fun operationPress(){
+
+    }
+    fun equalsPress(){
+
+    }
     Column(
         modifier = Modifier
             .background(Color.LightGray)
